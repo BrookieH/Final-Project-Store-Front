@@ -209,13 +209,14 @@ namespace Final_Project_Store_Front.Properties
                 totalwPromoLabel.Text = "you got 10% off";
                 discountLabel.Text = "Discount Total";
             }
-            else //If discount code is wrong 
+            else //If discount code is wrong
             {
                 totalwPromoLabel.Text = "Code not Vaild";
                 totalDiscountLabel.Text = "";
                 discountLabel.Text = "";
             }
 
+            //list on screen
             listLabel.Text = "";
             foreach (Flower f in Inventory)
             {
@@ -260,8 +261,8 @@ namespace Final_Project_Store_Front.Properties
             #endregion
         }
 
-        private void refeshButton_Click(object sender, EventArgs e)
         #region refresh
+        private void refeshButton_Click(object sender, EventArgs e)      
         {
             //clearing text for new order
             veryTotalLabel.Text = "";
@@ -313,10 +314,15 @@ namespace Final_Project_Store_Front.Properties
 
         private void guessButton_Click(object sender, EventArgs e)
         {
+
             //Guess Game
             guessRose = Convert.ToInt16(totalRoseBox.Text);
             guessLily = Convert.ToInt16(totalLilyBox.Text);
             guessTulip = Convert.ToInt16(totalTulipBox.Text);
+            totalRoseBox.Text = "";
+            totalLilyBox.Text = "";
+            totalTulipBox.Text = "";
+            guessOutputLabel.Text = "";
 
             //guessing game
             if (guessRose == 10 && guessLily == 7 && guessTulip == 15)
@@ -325,7 +331,7 @@ namespace Final_Project_Store_Front.Properties
             }
             else
             {
-                guessOutputLabel.Text = "wrong guess, refresh and try again";
+                guessOutputLabel.Text = "wrong guess, try again";
             }
         }
     }

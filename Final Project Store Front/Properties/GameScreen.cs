@@ -65,6 +65,7 @@ namespace Final_Project_Store_Front.Properties
             Refresh();
         }
 
+
         private void GameScreen_Load(object sender, EventArgs e)
         {
 
@@ -137,17 +138,17 @@ namespace Final_Project_Store_Front.Properties
             }
             if (rose12Number > 0)
             {
-                Flower f = new Flower("12 rose", rose12Number);
+                Flower f = new Flower("12 roses", rose12Number);
                 Inventory.Add(f);
             }
             if (lily12Number > 0)
             {
-                Flower f = new Flower("12 lily", lily12Number);
+                Flower f = new Flower("12 lilies", lily12Number);
                 Inventory.Add(f);
             }
             if (tulip12Number > 0)
             {
-                Flower f = new Flower("12 tulip", tulip12Number);
+                Flower f = new Flower("12 tulips", tulip12Number);
                 Inventory.Add(f);
             }
             if (boutonniere1 > 0)
@@ -261,8 +262,27 @@ namespace Final_Project_Store_Front.Properties
             #endregion
         }
 
-        #region refresh
-        private void refeshButton_Click(object sender, EventArgs e)      
+
+        private void guessButton_Click(object sender, EventArgs e)
+        {
+
+            //Guess Game
+            guessRose = Convert.ToInt16(totalRoseBox.Text);
+            guessLily = Convert.ToInt16(totalLilyBox.Text);
+            guessTulip = Convert.ToInt16(totalTulipBox.Text);
+
+            //guessing game
+            if (guessRose == 10 && guessLily == 7 && guessTulip == 15)
+            {
+                guessOutputLabel.Text = "correct guess, use code SAVE10";
+            }
+            else
+            {
+                guessOutputLabel.Text = "wrong guess, refresh and try again";
+            }
+        }
+
+        private void refeshButton_Click_1(object sender, EventArgs e)
         {
             //clearing text for new order
             veryTotalLabel.Text = "";
@@ -275,6 +295,7 @@ namespace Final_Project_Store_Front.Properties
             totalRoseBox.Text = "";
             totalLilyBox.Text = "";
             totalTulipBox.Text = "";
+            listLabel.Text = "";
             codeBox.Text = "";
             roseBox.Text = "";
             lilyBox.Text = "";
@@ -307,32 +328,6 @@ namespace Final_Project_Store_Front.Properties
             bouquet1 = 0;
             bouquet2 = 0;
             bouquet3 = 0;
-
-        }
-
-        #endregion
-
-        private void guessButton_Click(object sender, EventArgs e)
-        {
-
-            //Guess Game
-            guessRose = Convert.ToInt16(totalRoseBox.Text);
-            guessLily = Convert.ToInt16(totalLilyBox.Text);
-            guessTulip = Convert.ToInt16(totalTulipBox.Text);
-            totalRoseBox.Text = "";
-            totalLilyBox.Text = "";
-            totalTulipBox.Text = "";
-            guessOutputLabel.Text = "";
-
-            //guessing game
-            if (guessRose == 10 && guessLily == 7 && guessTulip == 15)
-            {
-                guessOutputLabel.Text = "correct guess, use code SAVE10";
-            }
-            else
-            {
-                guessOutputLabel.Text = "wrong guess, try again";
-            }
         }
     }
 }

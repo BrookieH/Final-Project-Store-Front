@@ -699,6 +699,7 @@
             this.refeshButton.TabIndex = 87;
             this.refeshButton.Text = "Refresh";
             this.refeshButton.UseVisualStyleBackColor = false;
+            this.refeshButton.Click += new System.EventHandler(this.refeshButton_Click_1);
             // 
             // rosedLabel
             // 

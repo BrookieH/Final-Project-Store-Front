@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Final_Project_Store_Front.Properties
 {
@@ -103,6 +104,8 @@ namespace Final_Project_Store_Front.Properties
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
+            SoundPlayer Open = new SoundPlayer(Properties.Resources.Checkout);
+            Open.Play();
             //converting to integer
             roseNumber = Convert.ToInt16(roseBox.Text);
             lilyNumber = Convert.ToInt16(lilyBox.Text);
@@ -284,6 +287,8 @@ namespace Final_Project_Store_Front.Properties
 
         private void refeshButton_Click_1(object sender, EventArgs e)
         {
+            SoundPlayer Open = new SoundPlayer(Properties.Resources.Refresh);
+            Open.Play();
             //clearing text for new order
             veryTotalLabel.Text = "";
             totalwPromoLabel.Text = "";

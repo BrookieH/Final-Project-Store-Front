@@ -63,6 +63,15 @@ namespace Final_Project_Store_Front.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Checkout {
+            get {
+                return ResourceManager.GetStream("Checkout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream Exit {
             get {
                 return ResourceManager.GetStream("Exit", resourceCulture);
@@ -75,6 +84,15 @@ namespace Final_Project_Store_Front.Properties {
         internal static System.IO.UnmanagedMemoryStream Open {
             get {
                 return ResourceManager.GetStream("Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Refresh {
+            get {
+                return ResourceManager.GetStream("Refresh", resourceCulture);
             }
         }
     }

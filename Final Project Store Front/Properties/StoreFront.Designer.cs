@@ -346,7 +346,7 @@
             this.Controls.Add(this.welcomeLabel);
             this.Name = "StoreFront";
             this.Size = new System.Drawing.Size(870, 507);
-            this.Load += new System.EventHandler(this.StoreFront_Load);
+           // this.Load += new System.EventHandler(this.StoreFront_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.StoreFront_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();

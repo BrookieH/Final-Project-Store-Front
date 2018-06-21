@@ -104,5 +104,11 @@
   <ItemGroup>
     <None Include="Resources\Sword Swing-SoundBible.com-639083727.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cha_Ching_Register-Muska666-173262285.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blop-Mark_DiAngelo-79054334.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

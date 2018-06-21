@@ -19,11 +19,6 @@ namespace Final_Project_Store_Front.Properties
             Refresh();
         }
 
-        private void StoreFront_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void comeinButton_Click(object sender, EventArgs e)
         {
             SoundPlayer Open = new SoundPlayer(Properties.Resources.Open);
